@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">beshop</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="home">
+        <h1>Welcome to beshop</h1>
+        <p>Your one-stop shop for amazing products!</p>
+    </section>
+
+    <!-- Product Section -->
+    <section id="products" class="products">
+        <h2>Our Products</h2>
+        <div class="product-list">
+            <!-- 20 Product Items -->
+            <div class="product-item" data-id="1">
+                <img src="product1.png" alt="Product 1">
+                <h3>Nike shoes new model</h3>
+                <p>$50.00</p>
+                <button class="buy-button" onclick="buyNow(1)">Buy Now</button>
+                <button class="call-button" onclick="callUs()">Call Us</button>
+            </div>
+            <div class="product-item" data-id="2">
+                <img src="product2.png" alt="Product 2">
+                <h3>Canon camera EDS RS</h3>
+                <p>$200.00</p>
+                <button class="buy-button" onclick="buyNow(2)">Buy Now</button>
+                <button class="call-button" onclick="callUs()">Call Us</button>
+            </div>
+            <div class="product-item" data-id="3">
+                <img src="product3.png" alt="Product 3">
+                <h3>Iphone 16 pro max new model</h3>
+                <p>$3000.00</p>
+                <button class="buy-button" onclick="buyNow(3)">Buy Now</button>
+                <button class="call-button" onclick="callUs()">Call Us</button>
+            </div>
+            <div class="product-item" data-id="4">
+                <img src="product4.png" alt="Product 4">
+                <h3>Samsung Galaxy S 25 Ultra</h3>
+                <p>$3000.00</p>
+                <button class="buy-button" onclick="buyNow(4)">Buy Now</button>
+                <button class="call-button" onclick="callUs()">Call Us</button>
+            </div>
+            <div class="product-item" data-id="5">
+                <img src="product5.png" alt="Product 5">
+                <h3>Smartwatch 2025</h3>
+                <p>$150.00</p>
+                <button class="buy-button" onclick="buyNow(5)">Buy Now</button>
+                <button class="call-button" onclick="callUs()">Call Us</button>
+            </div>
+            <div class="product-item" data-id="6">
+                <img src="product6.jpg" alt="Product 6">
+                <h3>Wireless Earbuds</h3>
+                <p>$80.00</p>
+                <button class="buy-button" onclick="buyNow(6)">Buy Now</button>
+                <button class="call-button" onclick="callUs()">Call Us</button>
+            </div>
+            <div class="product-item" data-id="7">
+                <img src="product7.jpg" alt="Product 7">
+                <h3>Bluetooth Speaker</h3>
+                <p>$70.00</p>
+                <button class="buy-button" onclick="buyNow(7)">Buy Now</button>
+                <button class="call-button" onclick="callUs()">Call Us</button>
+            </div>
+            <div class="product-item" data-id="8">
+                <img src="product8.jpg" alt="Product 8">
+                <h3>Gaming Headset</h3>
+                <p>$90.00</p>
+                <button class="buy-button" onclick="buyNow(8)">Buy Now</button>
+                <button class="call-button" onclick="callUs()">Call Us</button>
+            </div>
+            <div class="product-item" data-id="9">
+                <img src="product9.jpg" alt="Product 9">
+                <h3>4K TV</h3>
+                <p>$1200.00</p>
+                <button class="buy-button" onclick="buyNow(9)">Buy Now</button>
+                <button class="call-button" onclick="callUs()">Call Us</button>
+            </div>
+            <div class="product-item" data-id="10">
+                <img src="product10.jpg" alt="Product 10">
+                <h3>Fitness Tracker</h3>
+                <p>$60.00</p>
+                <button class="buy-button" onclick="buyNow(10)">Buy Now</button>
+                <button class="call-button" onclick="callUs()">Call Us</button>
+            </div>
+            <div class="product-item" data-id="11">
+                <img src="product11.jpg" alt="Product 11">
+                <h3>Tablet Pro</h3>
+                <p>$400.00</p>
+                <button class="buy-button" onclick="buyNow(11)">Buy Now</button>
+                <button class="call-button" onclick="callUs()">Call Us</button>
+            </div>
+            <div class="product-item" data-id="12">
+                <img src="product12.jpg" alt="Product 12">
+                <h3>Smart Home Kit</h3>
+                <p>$350.00</p>
+                <button class="buy-button" onclick="buyNow(12)">Buy Now</button>
+                <button class="call-button" onclick="callUs()">Call Us</button>
+            </div>
+            <div class="product-item" data-id="13">
+                <img src="product13.jpg" alt="Product 13">
+                <h3>Smart TV Stick</h3>
+                <p>$40.00</p>
+                <button class="buy-button" onclick="buyNow(13)">Buy Now</button>
+                <button class="call-button" onclick="callUs()">Call Us</button>
+            </div>
+            <div class="product-item" data-id="14">
+                <img src="product14.jpg" alt="Product 14">
+                <h3>Game Console</h3>
+                <p>$500.00</p>
+                <button class="buy-button" onclick="buyNow(14)">Buy Now</button>
+                <button class="call-button" onclick="callUs()">Call Us</button>
+            </div>
+            <div class="product-item" data-id="15">
+                <img src="product15.jpg" alt="Product 15">
+                <h3>VR Headset</h3>
+                <p>$150.00</p>
+                <button class="buy-button" onclick="buyNow(15)">Buy Now</button>
+                <button class="call-button" onclick="callUs()">Call Us</button>
+            </div>
+            <div class="product-item" data-id="16">
+                <img src="product16.jpg" alt="Product 16">
+                <h3>Wireless Router</h3>
+                <p>$120.00</p>
+                <button class="buy-button" onclick="buyNow(16)">Buy Now</button>
+                <button class="call-button" onclick="callUs()">Call Us</button>
+            </div>
+            <div class="product-item" data-id="17">
+                <img src="product17.jpg" alt="Product 17">
+                <h3>Smart Light Bulb</h3>
+                <p>$25.00</p>
+                <button class="buy-button" onclick="buyNow(17)">Buy Now</button>
+                <button class="call-button" onclick="callUs()">Call Us</button>
+            </div>
+            <div class="product-item" data-id="18">
+                <img src="product18.jpg" alt="Product 18">
+                <h3>Electric Scooter</h3>
+                <p>$400.00</p>
+                <button class="buy-button" onclick="buyNow(18)">Buy Now</button>
+                <button class="call-button" onclick="callUs()">Call Us</button>
+            </div>
+            <div class="product-item" data-id="19">
+                <img src="product19.jpg" alt="Product 19">
+                <h3>Digital Camera</h3>
+                <p>$600.00</p>
+                <button class="buy-button" onclick="buyNow(19)">Buy Now</button>
+                <button class="call-button" onclick="callUs()">Call Us</button>
+            </div>
+            <div class="product-item" data-id="20">
+                <img src="product20.jpg" alt="Product 20">
+                <h3>Portable Charger</h3>
+                <p>$40.00</p>
+                <button class="buy-button" onclick="buyNow(20)">Buy Now</button>
+                <button class="call-button" onclick="callUs()">Call Us</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>We provide high-quality products at the best prices!</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>Email: support@beshop.com</p>
+        <p>Phone: 123-456-7890</p>
+    </section>
+
+    <script>
+        // JavaScript Functions for Buttons
+        function callUs() {
+            const phoneNumber = "1234567890"; // Replace with your actual phone number
+            window.location.href = `tel:${phoneNumber}`;
+        }
+
+        function buyNow(productId) {
+            const checkoutUrl = `Checkout.html${productId}`; // Redirect to checkout page
+            window.location.href = checkoutUrl;
+        }
+    </script>
+</body>
+</html>

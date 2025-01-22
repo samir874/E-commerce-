@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - E-Commerce Website</title>
+    <Style>
+        /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+/* Product Section */
+.product-item {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    max-width: 250px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product-item h3 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.product-item p {
+    font-size: 16px;
+    color: #333;
+}
+
+.product-item button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.product-item button:hover {
+    background-color: #555;
+}
+
+/* Checkout Section */
+.checkout-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.product-details {
+    width: 50%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-details img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product-details h3 {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.product-details p {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.product-details button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 18px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.product-details button:hover {
+    background-color: #555;
+}
+
+/* Customer Form Section */
+.customer-details {
+    width: 45%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.customer-details h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.customer-details form div {
+    margin-bottom: 20px;
+}
+
+.customer-details label {
+    font-size: 18px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.customer-details input, .customer-details textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.customer-details textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.customer-details button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 18px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.customer-details button:hover {
+    background-color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .checkout-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-details, .customer-details {
+        width: 100%;
+    }
+}
+
+    </Style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">beshop</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Checkout Section -->
+    <section id="checkout" class="checkout">
+        <h2>Checkout</h2>
+        <div class="checkout-container">
+            <div class="product-details">
+                <img id="product-image" src="Product" alt="Product Image">
+                <h3 id="product-name">Product Name</h3>
+                <p id="product-price">$0.00</p>
+                <button id="buy-now-button" onclick="proceedToPayment()">Proceed to Payment</button>
+            </div>
+
+            <div class="customer-details">
+                <h3>Enter Your Details</h3>
+                <form id="checkout-form">
+                    <div>
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div>
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div>
+                        <label for="address">Shipping Address:</label>
+                        <textarea id="address" name="address" required></textarea>
+                    </div>
+                    <div>
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // JavaScript for Checkout Page
+        function getProductDetails() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = urlParams.get('product_id');
+            const productData = getProductData(productId);
+
+            if (productData) {
+                // Display product information on the checkout page
+                document.getElementById('product-image').src = productData.image;
+                document.getElementById('product-name').textContent = productData.name;
+                document.getElementById('product-price').textContent = `$${productData.price}`;
+            }
+        }
+
+        function getProductData(productId) {
+            const products = [
+                { id: 1, name: 'Nike shoes new model', price: 50.00, image: 'product1.png' },
+                { id: 2, name: 'Canon camera EDS RS', price: 200.00, image: 'product2.png' },
+                { id: 3, name: 'Iphone 16 pro max new model', price: 3000.00, image: 'product3.png' },
+                { id: 4, name: 'Samsung Galaxy S 25 Ultra', price: 3000.00, image: 'product4.png' },
+                { id: 5, name: 'Smartwatch 2025', price: 150.00, image: 'product5.png' },
+                { id: 6, name: 'Wireless Earbuds', price: 80.00, image: 'product6.jpg' },
+                { id: 7, name: 'Bluetooth Speaker', price: 70.00, image: 'product7.jpg' },
+                { id: 8, name: 'Gaming Headset', price: 90.00, image: 'product8.jpg' },
+                { id: 9, name: '4K TV', price: 1200.00, image: 'product9.jpg' },
+                { id: 10, name: 'Fitness Tracker', price: 60.00, image: 'product10.jpg' },
+                { id: 11, name: 'Tablet Pro', price: 400.00, image: 'product11.jpg' },
+                { id: 12, name: 'Smart Home Kit', price: 350.00, image: 'product12.jpg' },
+                { id: 13, name: 'Smart TV Stick', price: 40.00, image: 'product13.jpg' },
+                { id: 14, name: 'Game Console', price: 500.00, image: 'product14.jpg' },
+                { id: 15, name: 'VR Headset', price: 150.00, image: 'product15.jpg' },
+                { id: 16, name: 'Wireless Router', price: 120.00, image: 'product16.jpg' },
+                { id: 17, name: 'Smart Light Bulb', price: 25.00, image: 'product17.jpg' },
+                { id: 18, name: 'Electric Scooter', price: 400.00, image: 'product18.jpg' },
+                { id: 19, name: 'Digital Camera', price: 600.00, image: 'product19.jpg' },
+                { id: 20, name: 'Portable Charger', price: 40.00, image: 'product20.jpg' }
+            ];
+
+            return products.find(product => product.id === parseInt(productId));
+        }
+
+        function proceedToPayment() {
+            // Proceed to the payment page or handle the payment process
+            alert('Proceeding to payment...');
+        }
+
+        // Call the getProductDetails function when the page loads
+        window.onload = getProductDetails;
+    </script>
+</body>
+</html>
